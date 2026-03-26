@@ -183,9 +183,7 @@ This is the neural network approach, and it's genuinely interesting — not beca
 
 The inputs to our pricer are the things that determine an option's value: **log-moneyness** (how in- or out-of-the-money the option is, expressed as `log(S/K)`), **time to expiry**, **the risk-free rate**, and **implied volatility**. The outputs are the call and put prices as a fraction of the current stock price.
 
-We use log-moneyness rather than raw S and K separately because of a beautiful property of Black-Scholes: the price scales proportionally with the stock price. If you double S and K simultaneously, the option price doubles. So the formula really only depends on their ratio, not their individual levels. A network trained on $100 stocks generalises correctly to $185 stocks — as long as we express moneyness the right way. This is the kind of structural insight that makes the difference between a network that works and one that blows up the moment you ask it to price an unfamiliar stock.
-
-The architecture is a standard feedforward network: inputs flow through three hidden layers (64 → 64 → 32 neurons, each with a ReLU activation), before reaching the output layer. ReLU — `max(0, x)` — introduces the non-linearity the network needs to approximate curved, complex functions like BS pricing. A purely linear network could only learn linear functions, which are nowhere near enough.
+We use log-moneyness rather than raw S and K separately because of a property of Black-Scholes: the price scales proportionally with the stock price. If you double S and K simultaneously, the option price doubles. So the formula really only depends on their ratio, not their individual levels. A network trained on $100 stocks generalises correctly to $185 stocks — as long as we express moneyness the right way. This is the kind of structural insight that makes the difference between a network that works and one that blows up the moment you ask it to price an unfamiliar stock.
 
 ### So Why Bother, If We Already Have Black-Scholes?
 

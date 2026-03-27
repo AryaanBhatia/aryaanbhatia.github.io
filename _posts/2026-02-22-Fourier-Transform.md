@@ -3,7 +3,7 @@ title: Sounds to Sins
 date: 2026-02-22 00:00:00 +1000
 categories: [MATHEMATICS]
 tags: [mathematics, modelling]     # TAG names should always be lowercase
-description:  Everything is a sum of Sins
+description:  Everything Is A Sum Of Sins
 comments: false
 author: Aryaan
 math: true

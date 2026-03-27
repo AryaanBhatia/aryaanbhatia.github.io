@@ -3,7 +3,7 @@ title: Black-Scholes Options Pricing
 date: 2026-02-03 00:00:00 +1000
 categories: [MATHEMATICS]
 tags: [mathematics, finance]     # TAG names should always be lowercase
-description: Intro to Math in Finance
+description: Intro To Math In Finance
 comments: false
 author: Aryaan
 math: true

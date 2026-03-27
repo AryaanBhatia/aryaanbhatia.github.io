@@ -233,5 +233,3 @@ The five-day forecast today is more accurate than the three-day forecast forty y
 Understanding where the limit comes from, rather than treating forecast uncertainty as a sign of inadequate effort, is the more useful framing.
 
 ---
-
-*Further reading: Edward Lorenz's 1963 paper "Deterministic Nonperiodic Flow" is accessible and worth reading as a primary source. Eugenia Kalnay's "Atmospheric Modeling, Data Assimilation and Predictability" is the standard graduate-level reference. The GraphCast paper (Lam et al., 2023) and the FourCastNet paper cover the two main ML architectural approaches.*

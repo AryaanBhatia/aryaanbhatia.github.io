@@ -308,5 +308,3 @@ Most people in gambling and trading overestimate their edge, from fitting models
 The Kelly framework is particularly unforgiving of this. Overbetting is where ruin lives, and overestimating edge leads directly to overbetting. Getting the inputs right, calibrating estimates conservatively, accounting for model uncertainty, and using fractional Kelly as a buffer against estimation error, is the harder and more important part of applying the criterion in practice.
 
 ---
-
-*Further reading: Ed Thorp's autobiography "A Man for All Markets" covers the blackjack and trading applications. His 2008 paper "The Kelly Criterion in Blackjack, Sports Betting, and the Stock Market" is the detailed technical treatment. Kelly's original 1956 Bell Labs paper "A New Interpretation of Information Rate" is short and readable. William Poundstone's "Fortune's Formula" covers the full history. Ralph Vince's "The Mathematics of Money Management" extends Kelly into multi-asset trading.*

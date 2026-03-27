@@ -211,5 +211,3 @@ The Fourier transform works because functions on an interval form a **vector spa
 Sines are the natural basis not by convention but because they are eigenfunctions of the differentiation operator. In problems where the fundamental equations are differential equations with constant coefficients, which covers a large portion of physics and engineering, sines are the functions that simplify the mathematics. Different settings produce different natural bases: Bessel functions, Legendre polynomials, spherical harmonics appear in cylindrical and spherical geometries. The Fourier basis is the right choice when the geometry is flat and the equations have constant coefficients.
 
 ---
-
-*Further reading: Gilbert Strang's "Computational Science and Engineering" covers the FFT and its applications in depth. Brad Osgood's Stanford lecture notes on the Fourier transform are freely available. For the financial application, Carr and Madan's 1999 paper "Option Valuation Using the Fast Fourier Transform" is the primary reference.*

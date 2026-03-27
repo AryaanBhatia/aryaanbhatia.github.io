@@ -1,9 +1,9 @@
 ---
-title: Weather Forecasting
+title: Kelly Criterion
 date: 2026-03-05 00:00:00 +1000
 categories: [MATHEMATICS]
 tags: [mathematics, modelling]     # TAG names should always be lowercase
-description:  Bet Sizing
+description:  How Much Should You Bet?
 comments: false
 author: Aryaan
 math: true
@@ -14,15 +14,13 @@ mermaid: true
 
 ### The Kelly Criterion, Optimal Sizing, and Why Almost Everyone Bets Too Much
 
-*On the formula that started at a Bell Labs telephone line, moved to the blackjack tables of Las Vegas, and ended up running money at some of the most successful hedge funds in history.*
-
 ---
 
 If you have a genuine mathematical edge, how much of your money should you bet on it?
 
-The instinct is to bet as much as possible. The instinct is wrong, and wrong in a specific way — bet too much on any sequence of uncertain outcomes, no matter how favourable, and compounding will eventually destroy you. Not might. Will.
+The instinct is to bet as much as possible. The instinct is wrong, and wrong in a specific way, bet too much on any sequence of uncertain outcomes, no matter how favourable, and compounding will eventually destroy you. Not might. Will.
 
-The correct answer — the fraction that maximises the long-run growth rate of your wealth — was worked out in 1956 by a physicist at Bell Labs named John Larry Kelly Jr. He was not thinking about gambling. He was thinking about information theory and the capacity of noisy telephone lines. The connection between the two, when Claude Shannon pointed it out, turned out to be one of the more productive accidents in applied mathematics.
+The correct answer, the fraction that maximises the long-run growth rate of your wealth, was worked out in 1956 by a physicist at Bell Labs named John Larry Kelly Jr. He was not thinking about gambling. He was thinking about information theory and the capacity of noisy telephone lines. The connection between the two, when Claude Shannon pointed it out, turned out to be one of the more productive accidents in applied mathematics.
 
 ---
 
@@ -34,7 +32,7 @@ Take `p = 0.6`. The expected value of betting one dollar is `0.6 × $1 − 0.4 �
 
 Now the question: what fraction `f` of your current bankroll should you bet on each flip?
 
-With starting bankroll `W₀`, after N flips — W wins and L losses — your bankroll is:
+With starting bankroll `W₀`, after N flips, W wins and L losses, your bankroll is:
 
 ```
 Bankroll After N Flips:
@@ -47,7 +45,7 @@ Bankroll After N Flips:
     L  = number of losses
 ```
 
-Every win multiplies your bankroll by `(1 + f)`. Every loss multiplies by `(1 − f)`. These terms multiply together — compound growth. To find the optimal `f`, maximise the long-run growth rate per flip:
+Every win multiplies your bankroll by `(1 + f)`. Every loss multiplies by `(1 − f)`. To find the optimal `f`, maximise the long-run growth rate per flip:
 
 ```
 Growth Rate Per Flip:
@@ -68,7 +66,7 @@ Growth Rate Per Flip:
 
 For `p = 0.6`, `q = 0.4`: `f* = 0.20`. Bet 20% of your bankroll each flip.
 
-This is the **Kelly Criterion** in its simplest form — the optimal fraction is the edge expressed as a probability difference.
+This is the **Kelly Criterion** in its simplest form. The optimal fraction is the edge expressed as a probability difference.
 
 ---
 
@@ -94,7 +92,7 @@ The Kelly Criterion — General Form:
        =  Expected profit per dollar bet / Net odds
 ```
 
-Kelly says to size the bet proportional to your edge and inversely proportional to the potential payoff. A large potential payoff means you need to bet less to extract the same value — the asymmetry of the payoff does more of the work.
+Kelly says to size the bet proportional to your edge and inversely proportional to the potential payoff. A large potential payoff means you need to bet less to extract the same value. The asymmetry of the payoff does more of the work.
 
 Example: a horse race where the true probability of winning is 30% and the track offers 4-to-1 odds:
 
@@ -107,13 +105,13 @@ Bet 12.5% of bankroll.
 Expected value per dollar: $0.50
 ```
 
-A 50% expected profit per dollar, but you still only bet 12.5% of your roll. A loss costs you the full stake — the downside is not symmetric with the upside.
+A 50% expected profit per dollar, but you still only bet 12.5% of your roll. A loss costs you the full stake. The downside is not symmetric with the upside.
 
 ---
 
 ## Part Three — What Happens If You Bet Too Much
 
-The Kelly fraction is the unique fraction that maximises long-run growth rate. Bet less and you leave growth on the table. Bet more and you reduce your long-run wealth — even though your expected value per bet is still positive.
+The Kelly fraction is the unique fraction that maximises long-run growth rate. Bet less and you leave growth on the table. Bet more and you reduce your long-run wealth, even though your expected value per bet is still positive.
 
 ```
 Growth Rate at Different Fractions of Kelly:
@@ -133,9 +131,9 @@ Growth Rate at Different Fractions of Kelly:
 
 The growth rate curve is concave with a maximum at `f*`. The zero crossing is exactly at `f = 2f*`. Beyond double Kelly, long-run wealth goes to zero regardless of the size of the edge.
 
-Underbetting is conservative. Overbetting is compounding damage — the expected value of each individual bet is positive, but the geometric drag from high variance outweighs it over a long sequence.
+Underbetting is conservative. Overbetting is compounding damage, the expected value of each individual bet is positive, but the geometric drag from high variance outweighs it over a long sequence.
 
-> The Kelly fraction is the point at which the marginal benefit of betting more — higher expected gain — exactly equals the marginal cost — increased variance that reduces the geometric growth rate. Beyond that point, additional bet size costs more in geometric drag than it adds in expected return.
+> The Kelly fraction is the point at which the marginal benefit of betting more, higher expected gain, exactly equals the marginal cost, increased variance that reduces the geometric growth rate. Beyond that point, additional bet size costs more in geometric drag than it adds in expected return.
 
 ---
 
@@ -163,7 +161,7 @@ Thorp published this in 1962 in *Beat the Dealer*, proved it worked at Las Vegas
 
 ## Part Five — Kelly in Trading
 
-The blackjack setting is clean: known probabilities, discrete outcomes. Trading is not. Payoffs are continuous — a position produces a distribution of returns rather than a fixed multiple. Probabilities and expected returns are not known — they have to be estimated from historical data.
+The blackjack setting is clean: known probabilities, discrete outcomes. Trading is not. Payoffs are continuous, a position produces a distribution of returns rather than a fixed multiple. Probabilities and expected returns are not known, they have to be estimated from historical data.
 
 For continuous return distributions, the Kelly criterion takes the form:
 
@@ -211,7 +209,7 @@ Kelly for a Multi-Asset Portfolio:
     f* = vector of Kelly-optimal position sizes
 ```
 
-The covariance matrix matters because correlated positions share risk. Two positions that move together should be treated as one larger position for sizing purposes. This expression is also proportional to the Markowitz mean-variance optimal portfolio — both frameworks are solving the same optimisation.
+The covariance matrix matters because correlated positions share risk. Two positions that move together should be treated as one larger position for sizing purposes. This expression is also proportional to the Markowitz mean-variance optimal portfolio, both frameworks are solving the same optimisation.
 
 ---
 
@@ -219,7 +217,7 @@ The covariance matrix matters because correlated positions share risk. Two posit
 
 The Kelly formula requires knowing `p` and `b`. In a casino these can be calculated from the rules. In financial markets they have to be estimated, and those estimates will be wrong.
 
-The consequences are asymmetric. Overestimating your edge means betting too much. Overbetting under Kelly causes compounding losses. And overestimating edge is the default failure mode — it is straightforward to find patterns in historical data that do not persist out of sample.
+The consequences are asymmetric. Overestimating your edge means betting too much. Overbetting under Kelly causes compounding losses. And overestimating edge is the default failure mode, it is straightforward to find patterns in historical data that do not persist out of sample.
 
 ```
 Sensitivity of Kelly to Edge Estimation Errors:
@@ -227,11 +225,11 @@ Sensitivity of Kelly to Edge Estimation Errors:
   True edge:           p = 0.52, b = 1   →  f* = 0.04  (4%)
   Overestimate by 5pp: p = 0.57          →  f* = 0.14  (14%)
 
-  You bet 3.5x the correct amount — well into the overbetting zone.
+  You bet 3.5x the correct amount, well into the overbetting zone.
   Edge estimation errors of this magnitude are routine in practice.
 ```
 
-Most practitioners who apply Kelly in markets use a scaled-down version — **fractional Kelly**, most commonly half Kelly.
+Most practitioners who apply Kelly in markets use a scaled-down version, **fractional Kelly**, most commonly half Kelly.
 
 ```
 Fractional Kelly:
@@ -243,7 +241,7 @@ Fractional Kelly:
     α = 0.25 →  Quarter Kelly (conservative)
 ```
 
-Half Kelly has a mathematical justification. If your edge estimate has uncertainty of order `ε`, the optimal bet under that uncertainty is approximately `f* · (1 − ε²)`, which is close to `f*/2` for typical estimation errors. Half Kelly is a rough approximation to the Bayesian Kelly — the correct Kelly fraction when you have a distribution over possible edges rather than a known point estimate.
+Half Kelly has a mathematical justification. If your edge estimate has uncertainty of order `ε`, the optimal bet under that uncertainty is approximately `f* · (1 − ε²)`, which is close to `f*/2` for typical estimation errors. Half Kelly is a rough approximation to the Bayesian Kelly, the correct Kelly fraction when you have a distribution over possible edges rather than a known point estimate.
 
 ---
 
@@ -256,7 +254,7 @@ Long-Term Capital Management had real edges in fixed income relative value. They
 ```
 Kelly Ruin Probabilities:
 
-  Full Kelly — probability of ever reaching fraction x of starting bankroll:
+  Full Kelly, probability of ever reaching fraction x of starting bankroll:
 
     P(dropping to x)  =  x
 
@@ -278,9 +276,9 @@ The Kelly path is not smooth. Large drawdowns are expected, not exceptional. The
 
 ## Part Eight — The Connection to Information Theory
 
-The Kelly criterion and Shannon's information theory are not just historically connected — they are mathematically the same problem.
+The Kelly criterion and Shannon's information theory are not just historically connected, they are mathematically the same problem.
 
-Shannon's channel capacity gives the maximum rate at which information can be transmitted over a noisy channel. Kelly's growth rate gives the maximum rate at which wealth can be extracted from an edge. The two quantities are equal under the same mathematical structure. If you have no edge, the correct bet is zero — you have no information to act on. If you have an edge, the Kelly fraction translates that information into wealth at the maximum rate the mathematics allows.
+Shannon's channel capacity gives the maximum rate at which information can be transmitted over a noisy channel. Kelly's growth rate gives the maximum rate at which wealth can be extracted from an edge. The two quantities are equal under the same mathematical structure. If you have no edge, the correct bet is zero, you have no information to act on. If you have an edge, the Kelly fraction translates that information into wealth at the maximum rate the mathematics allows.
 
 ```
 The Mathematics of Compounding Asymmetry:
@@ -305,9 +303,9 @@ Maximising expected value in a single bet and maximising expected log wealth ove
 
 The Kelly criterion tells you how much to bet given that you know your edge. The harder problem is honestly assessing whether you have an edge and how large it is.
 
-Most people in gambling and trading overestimate their edge — from fitting models to historical data and mistaking in-sample performance for out-of-sample edge, drawing conclusions from small samples, and conflating recent returns with persistent skill.
+Most people in gambling and trading overestimate their edge, from fitting models to historical data and mistaking in-sample performance for out-of-sample edge, drawing conclusions from small samples, and conflating recent returns with persistent skill.
 
-The Kelly framework is particularly unforgiving of this. Overbetting is where ruin lives, and overestimating edge leads directly to overbetting. Getting the inputs right — calibrating estimates conservatively, accounting for model uncertainty, and using fractional Kelly as a buffer against estimation error — is the harder and more important part of applying the criterion in practice.
+The Kelly framework is particularly unforgiving of this. Overbetting is where ruin lives, and overestimating edge leads directly to overbetting. Getting the inputs right, calibrating estimates conservatively, accounting for model uncertainty, and using fractional Kelly as a buffer against estimation error, is the harder and more important part of applying the criterion in practice.
 
 ---
 

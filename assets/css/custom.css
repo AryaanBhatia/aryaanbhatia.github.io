@@ -1,0 +1,61 @@
+/* ── Purple accent overrides ── */
+
+/* Links */
+:root[data-mode='dark'],
+html:not([data-mode]) {
+  --link-color: #b388ff;
+  --toc-highlight: #b388ff;
+}
+
+:root[data-mode='light'] {
+  --link-color: #6d28d9;
+  --toc-highlight: #6d28d9;
+}
+
+/* Sidebar: active nav item + hover */
+#sidebar .nav-link.active {
+  color: #b388ff !important;
+}
+
+#sidebar .nav-link:hover {
+  color: #ce93d8 !important;
+}
+
+/* Sidebar bottom icons on hover */
+#sidebar .sidebar-bottom a:hover {
+  color: #b388ff !important;
+}
+
+/* Post headings */
+.post h2,
+.post h3 {
+  color: #ce93d8;
+}
+
+/* Inline code */
+code:not(.highlight code) {
+  color: #b388ff;
+}
+
+/* Tag pill borders & text */
+.post-tag {
+  border-color: #7c3aed !important;
+  color: #b388ff !important;
+}
+
+.post-tag:hover {
+  background-color: #4a1d96 !important;
+  color: #fff !important;
+}
+
+/* TOC active highlight */
+#toc-wrapper .active {
+  color: #b388ff !important;
+  border-left-color: #b388ff !important;
+}
+
+/* Selection highlight */
+::selection {
+  background: #6d28d9;
+  color: #fff;
+}

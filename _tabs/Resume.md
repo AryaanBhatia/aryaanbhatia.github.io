@@ -26,6 +26,9 @@ Comfortable operating across **research, modelling, engineering, finance, and en
 ## 🎓 Education
 
 **University of New South Wales (UNSW), Sydney**  
+**Masters of Mathematics, Applied Mathematics**  
+
+**University of New South Wales (UNSW), Sydney**  
 **Bachelor of Actuarial Studies & Computer Science (Artificial Intelligence)**  
 
 - Actuarial science foundation  

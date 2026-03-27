@@ -1,9 +1,9 @@
 ---
-title: Mathematics behind Black-Scholes options pricing
+title: Black-Scholes Options Pricing
 date: 2026-02-03 00:00:00 +1000
 categories: [MATHEMATICS]
 tags: [mathematics, finance]     # TAG names should always be lowercase
-description: Step 1 in mathematical finance
+description: Intro to Math in Finance
 comments: false
 author: Aryaan
 math: true

@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-icon: fas fa-book-open
+icon: fas fa-scroll
 order: 6
 ---
 
